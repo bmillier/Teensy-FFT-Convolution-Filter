@@ -17,7 +17,7 @@ Toolchain used  Arduino 1.8.0 and Teensyduino 1.34
   
   What is this good for?
 	My main goal in writing this was to provide a way for the Teensy to do guitar amplifier cabinet simulation, using commercially available/freeware  impulse files( in WAV format). For this application, the latency (important to guitar players) is approx. 19.5 milliseconds.
-	This can also be used to provide the very sharp filtering characteristics provided by a 513-tap FIR filter.
+	This routine can also be used to provide the very sharp filtering characteristics provided by a 513-tap FIR filter.
 
 How does it work?
 	This object is a single channel filter which performs a 513-tap convolution on the audio stream that is fed to it (@ 44,100 Hz Sample Rate). Since a 513 tap convolution would require more calculations than a Teensy 3.6 could perform in real time at a 44,100 sample rate, an alternate method is used. When a time domain signal is transformed into the frequency domain, the math-heavy convolution process can be replaced by a  multiplication of the signal and Filter Mask arrays. The combination of the transforms into the frequency domain and back again, plus the array multiplication, turns out to be much quicker than a straight 513-tap convolution (thanks to the efficiency of the FFT routines performed in the CMSIS library). 
