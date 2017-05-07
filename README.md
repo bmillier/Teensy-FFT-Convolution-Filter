@@ -1,8 +1,11 @@
 Brian Millier May 2017
 This object works with the PJRC Teensy Audio library using the Teensy 3.6. I drew upon DD4WH's SDR code in coming up with this library.Thanks Frank.
+
  Some hardware Floating Point CMSIS routines are used by this object. Teensyduino must have some files replaced/edited to accomodate this.To do this, please follow the detailed instructions found in Post #15 on the Teensy Forum at:
 https://forum.pjrc.com/threads/40590-Teensy-Convolution-SDR-(Software-Defined-Radio)?highlight=SDR
+
 (Ignore item #1, about Si5351, as it doesn't apply here)
+
 	If you are hesitant about making changes to your Arduino/Teensyduino environment, you can install a second, dedicated Arduino IDE on your PC by downloading the Arduino ZIP file and unzipping it into a new folder, named "Arduino-FPCMSIS" for example. Then run the Teensyduino installer and point to this folder when it asks you for the Arduino IDE location.
 
 Toolchain used  Arduino 1.8.0 and Teensyduino 1.34
