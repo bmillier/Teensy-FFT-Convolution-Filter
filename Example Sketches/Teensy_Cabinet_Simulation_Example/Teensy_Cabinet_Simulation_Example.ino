@@ -22,7 +22,7 @@
 #include <SerialFlash.h>
 #include <arm_math.h>
 #include <arm_const_structs.h>
-
+#include <filter_convolution.h>
 #include <Audio.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -120,10 +120,3 @@ void loop() {
 	}
 
 }
-
-
-
-
-
-
-
